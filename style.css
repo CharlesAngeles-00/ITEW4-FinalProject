@@ -235,19 +235,37 @@ nav ul li a:hover {
 }
 
 .president-image {
+    width: 100%;
     height: 300px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .president-image img {
     width: 90%;
     height: 90%;
     object-fit: cover;
-    object-position: top;
+    object-position: top center;
     transition: transform 0.5s;
+}
+
+.president-portrait {
+    width: 250px;      
+    height: 300px;      
+    overflow: hidden;   
+    border-radius: 8px;
+    position: relative;
+}
+
+.president-portrait img {
+    width: 100%;        
+    height: 100%;       
+    object-fit: cover;
+    object-position: top center;
+    display: block;
 }
 
 .president-card:hover .president-image img {
@@ -282,6 +300,44 @@ nav ul li a:hover {
     text-decoration: none;
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 3px;
+}
+
+
+.bio-highlights {
+    display: flex;
+    gap: 30px; 
+    margin: 40px 0; 
+}
+
+
+.highlight-card {
+    flex: 1; 
+    background: #f8f9fa; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.highlight-card h4 {
+    margin-top: 0;
+    color: #2c3e50; 
+    border-bottom: 2px solid #676767; 
+    padding-bottom: 10px;
+}
+
+.highlight-card ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.highlight-card li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.highlight-card li strong {
+    color: #2c3e50;
+    font-weight: 600;
 }
 
 /* Timeline Section */
