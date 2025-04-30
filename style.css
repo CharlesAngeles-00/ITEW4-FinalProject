@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
 }
 
 :root {
@@ -18,7 +20,11 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
+    p {
+        text-align: justify;
+    }
 }
+    
 
 /* Base Mobile Styles */
 .container {
