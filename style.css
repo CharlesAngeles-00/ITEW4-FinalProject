@@ -46,8 +46,9 @@ header {
 
 .header-content {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo {
@@ -67,33 +68,55 @@ header {
 }
 
 .menu-button {
-    display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 0.5rem 0;
+    margin-left: auto;
+    font-size: 2.5rem;
+}
+
+
+
+nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    z-index: 100;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+
+.menu-toggle:checked ~ nav {
+    max-height: 1000px;
 }
 
 nav ul {
-    display: none;
-    list-style: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-.menu-toggle:checked ~ nav ul {
     display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
 }
 
 nav ul li {
-    margin: 0.5rem 0;
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul li:last-child {
+    border-bottom: none;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    display: block;
+    width: 100%;
 }
 
 nav ul li a:hover {
@@ -540,86 +563,6 @@ nav ul li a:hover {
     background-color: #002d8a;
 }
 
-/*login page */
-    .login-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: linear-gradient(135deg, rgba(0, 56, 168, 0.9), rgba(206, 17, 38, 0.9));
-        padding: 20px;
-    }
-    
-    .login-box {
-        background-color: white;
-        padding: 2.5rem;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        width: 100%;
-        max-width: 400px;
-        text-align: center;
-    }
-    
-    .login-logo {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        color: var(--primary-color);
-    }
-    
-    .login-logo span {
-        color: var(--secondary-color);
-    }
-    
-    .login-title {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-        color: var(--dark-color);
-    }
-    
-    .login-form .form-group {
-        margin-bottom: 1.5rem;
-        text-align: left;
-    }
-    
-    .login-form label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-        color: var(--text-color);
-    }
-    
-    .login-form input {
-        width: 100%;
-        padding: 0.8rem;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1rem;
-    }
-    
-    .login-btn {
-        width: 100%;
-        padding: 0.8rem;
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    
-    .login-btn:hover {
-        background-color: #002d8a;
-    }
-    
-    .error-message {
-        color: var(--secondary-color);
-        margin-top: 1rem;
-        display: none;
-    }
-
 /* Footer */
 footer {
     background-color: var(--dark-color);
@@ -722,15 +665,22 @@ footer {
         display: none;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        margin-top: 0;
+    nav {
+        position: static;
         width: auto;
+        max-height: none;
+        background: transparent;
+    }
+
+    nav ul {
+        flex-direction: row;
+        padding: 0;
     }
 
     nav ul li {
         margin: 0 0 0 1rem;
+        padding: 0;
+        border-bottom: none;
     }
 
     .hero {
