@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="login-box">
+                <div class="login-logo">Philippine<span>Presidents</span></div>
+                <h2 class="login-title">Login to Continue</h2>
+                
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required placeholder="Enter your username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Login</button>
+                    <p class="error-message" id="errorMessage">Invalid username or password</p>
+                </form>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simple validation - in a real app, you would validate against a database
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                // Default credentials (for demo purposes only)
+                const validUsername = 'admin';
+                const validPassword = 'philippines';
+                
+                if (username === validUsername && password === validPassword) {
+                    // Store login status in localStorage
+                    localStorage.setItem('isAuthenticated', 'true');
+                    
+                    // Redirect to index.html
+                    window.location.href = 'index.html';
+                } else {
+                    // Show error message
+                    document.getElementById('errorMessage').style.display = 'block';
+                }
+            });
+    
+            // Check if user is already logged in (optional)
+            if (localStorage.getItem('isAuthenticated') === 'true') {
+                window.location.href = 'index.html';
+            }
+        </script>
+    </body>
+</html>
