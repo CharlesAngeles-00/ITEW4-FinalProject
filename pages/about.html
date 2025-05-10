@@ -22,7 +22,6 @@
             <li><a href="timeline.html">Timeline</a></li>
             <li><a href="resources.html">Resources</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#" id="logout">Logout</a></li>
           </ul>
         </nav>
       </div>
@@ -94,17 +93,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      // Prevent direct access without login
-      if (localStorage.getItem("isAuthenticated") !== "true") {
-        window.location.href = "login.html";
-      }
-
-      document.getElementById("logout").addEventListener("click", function (e) {
-        e.preventDefault();
-        localStorage.removeItem("isAuthenticated");
-        window.location.href = "../login.html";
-      });
-    </script>
   </body>
 </html>
