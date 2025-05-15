@@ -35,7 +35,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, rgba(0, 56, 168, 1) 30%, rgba(0, 51, 170, 0.813) 50%, rgba(255, 0, 30, 0.665) 50%, rgba(206, 17, 38, 1) 70%);
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -129,6 +129,8 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     position: relative;
+    overflow: hidden;
+
 }
 
 .hero::before {
@@ -140,6 +142,147 @@ nav ul li a:hover {
     height: 100%;
     background: rgba(0, 56, 168, 0.7);
 }
+
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slides {
+    position: relative;
+    width: 310%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    width: 33%;
+    height: 100%;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 56, 168, 0.7);
+}
+
+/* Hide radio buttons */
+.hero-carousel input[type="radio"] {
+    display: none;
+}
+
+/* Navigation arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.carousel-nav label {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 2rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    user-select: none;
+    z-index: 10;
+}
+
+.carousel-nav label.prev {
+    left: 0;
+}
+
+.carousel-nav label.next {
+    right: 0;
+}
+
+.carousel-nav label:hover {
+    opacity: 1;
+}
+
+
+.carousel-nav label:hover {
+    opacity: 1;
+}
+
+/* Navigation dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.carousel-dots label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Slide navigation */
+#slide-1:checked ~ .carousel-slides {
+    transform: translateX(0);
+}
+
+#slide-2:checked ~ .carousel-slides {
+    transform: translateX(-33%);
+}
+
+#slide-3:checked ~ .carousel-slides {
+    transform: translateX(-66%);
+}
+
+/* Highlight active dot */
+#slide-1:checked ~ .carousel-dots .dot:nth-child(1),
+#slide-2:checked ~ .carousel-dots .dot:nth-child(2),
+#slide-3:checked ~ .carousel-dots .dot:nth-child(3) {
+    background: white;
+}
+
+/* Arrow navigation logic */
+#slide-1:checked ~ .carousel-nav label[for="slide-3"].prev,
+#slide-1:checked ~ .carousel-nav label[for="slide-2"].next {
+    display: block;
+}
+
+#slide-2:checked ~ .carousel-nav label[for="slide-1"].prev,
+#slide-2:checked ~ .carousel-nav label[for="slide-3"].next {
+    display: block;
+}
+
+#slide-3:checked ~ .carousel-nav label[for="slide-2"].prev,
+#slide-3:checked ~ .carousel-nav label[for="slide-1"].next {
+    display: block;
+}
+
 
 .hero-content {
     position: relative;
@@ -506,6 +649,11 @@ nav ul li a:hover {
     margin-top: 1rem;
 }
 
+.social-links img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 .social-links a {
     color: white;
     font-size: 1.2rem;
@@ -520,6 +668,7 @@ nav ul li a:hover {
     background-color: white;
     padding: 1.5rem;
     border-radius: 8px;
+    width: 80%;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -578,6 +727,15 @@ footer {
 
 .footer-column {
     margin-bottom: 2rem;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-column a:hover {
+    color: rgb(48, 110, 255);
 }
 
 .footer-column:last-child {
@@ -689,6 +847,15 @@ footer {
 
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .carousel-nav label {
+        font-size: 3rem;
+    }
+    
+    .carousel-dots label {
+        width: 15px;
+        height: 15px;
     }
 
     .section {

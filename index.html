@@ -29,15 +29,45 @@
             </div>
         </header>
  
-         <section class="hero" id="home">
-             <div class="container hero-content">
-                 <div>
-                     <h1>Journey Through Philippine Leadership</h1>
-                     <p>Explore the history, achievements, and governance styles of all Philippine presidents from the First Republic to the present.</p>
-                     <a href="#presidents" class="btn">Explore Presidents</a>
-                 </div>
-             </div>
-         </section>
+        <section class="hero" id="home">
+            <div class="hero-carousel">
+                <!-- Radio buttons for slide selection -->
+                <input type="radio" name="slider" id="slide-1" checked>
+                <input type="radio" name="slider" id="slide-2" >
+                <input type="radio" name="slider" id="slide-3" >
+                
+                <div class="carousel-slides">
+                    <!-- Slide 1 -->
+                    <div class="slide slide-1" style="background-image: url('https://media.istockphoto.com/id/669254412/photo/philippines-flag-3d-rendering-on-blue-sky-building-background.jpg?s=612x612&w=0&k=20&c=dR1UXIvWbShZHL5ZiVwua6qhgCjCmdy8dCkmDFeSCZw=');"></div>
+                    <!-- Slide 2 -->
+                    <div class="slide slide-2" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/2/20/Malaca%C3%B1ang_Palace_%28local_img%29.jpg/960px-Malaca%C3%B1ang_Palace_%28local_img%29.jpg?20210228063327');"></div>
+                    <!-- Slide 3 -->
+                    <div class="slide slide-3" style="background-image: url('https://festivepinoy.com/wp-content/uploads/2024/10/Philippine-Revolution.jpg');"></div>
+                </div>
+                <!-- Navigation arrows -->
+                <div class="carousel-nav">
+                    <label for="slide-3" class="prev">&#10094;</label>
+                    <label for="slide-2" class="prev">&#10094;</label>
+                    <label for="slide-1" class="prev">&#10094;</label>
+                    <label for="slide-2" class="next">&#10095;</label>
+                    <label for="slide-3" class="next">&#10095;</label>
+                    <label for="slide-1" class="next">&#10095;</label>
+                </div>
+                <!-- Navigation dots -->
+                <div class="carousel-dots">
+                    <label for="slide-1" class="dot"></label>
+                    <label for="slide-2" class="dot"></label>
+                    <label for="slide-3" class="dot"></label>
+                </div>
+            </div>
+            <div class="container hero-content">
+                <div>
+                    <h1>Journey Through Philippine Leadership</h1>
+                    <p>Explore the history, achievements, and governance styles of all Philippine presidents from the First Republic to the present.</p>
+                    <a href="#presidents" class="btn">Explore Presidents</a>
+                </div>
+            </div>
+        </section>
  
          <section class="section" id="presidents">
              <div class="container">
@@ -48,7 +78,7 @@
                      <!-- President Card 1 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/aguinaldo-portrait.jpg" alt="Emilio Aguinaldo">
+                             <img src="./images/presidents/aguinaldo-portrait.jpg" alt="Emilio Aguinaldo">
                          </div>
                          <div class="president-info">
                              <h3>Emilio Aguinaldo</h3>
@@ -61,7 +91,7 @@
                      <!-- President Card 2 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/quezon-portrait.jpg" alt="Manuel L. Quezon">
+                             <img src="./images/presidents/quezon-portrait.jpg" alt="Manuel L. Quezon">
                          </div>
                          <div class="president-info">
                              <h3>Manuel L. Quezon</h3>
@@ -74,7 +104,7 @@
                      <!-- President Card 3 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/laurel-portrait.jpg" alt="Jose P. Laurel">
+                             <img src="./images/presidents/laurel-portrait.jpg" alt="Jose P. Laurel">
                          </div>
                          <div class="president-info">
                              <h3>Jose P. Laurel</h3>
@@ -87,7 +117,7 @@
                      <!-- President Card 4 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/osmeña-portrait.jpg" alt="Sergio Osmeña">
+                             <img src="./images/presidents/osmeña-portrait.jpg" alt="Sergio Osmeña">
                          </div>
                          <div class="president-info">
                              <h3>Sergio Osmeña</h3>
@@ -100,7 +130,7 @@
                      <!-- President Card 5 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/roxas-portrait.jpg" alt="Manuel Roxas">
+                             <img src="./images/presidents/roxas-portrait.jpg" alt="Manuel Roxas">
                          </div>
                          <div class="president-info">
                              <h3>Manuel Roxas</h3>
@@ -113,7 +143,7 @@
                      <!-- President Card 6 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/quirino-portrait.jpg" alt="Elpidio Quirino">
+                             <img src="./images/presidents/quirino-portrait.jpg" alt="Elpidio Quirino">
                          </div>
                          <div class="president-info">
                              <h3>Elpidio Quirino</h3>
@@ -126,7 +156,7 @@
                      <!-- President Card 7 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/magsaysay-portrait.jpg" alt="Ramon Magsaysay">
+                             <img src="./images/presidents/magsaysay-portrait.jpg" alt="Ramon Magsaysay">
                          </div>
                          <div class="president-info">
                              <h3>Ramon Magsaysay</h3>
@@ -139,7 +169,7 @@
                      <!-- President Card 8 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/garcia-portrait.jpg" alt="Carlos P. Garcia">
+                             <img src="./images/presidents/garcia-portrait.jpg" alt="Carlos P. Garcia">
                          </div>
                          <div class="president-info">
                              <h3>Carlos P. Garcia</h3>
@@ -152,7 +182,7 @@
                      <!-- President Card 9 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/macapagal-portrait.jpg" alt="Diosdado Macapagal">
+                             <img src="./images/presidents/macapagal-portrait.jpg" alt="Diosdado Macapagal">
                          </div>
                          <div class="president-info">
                              <h3>Diosdado Macapagal</h3>
@@ -165,7 +195,7 @@
                      <!-- President Card 10 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/ferdinand-marcos-portrait.jpg" alt="Ferdinand Marcos">
+                             <img src="./images/presidents/ferdinand-marcos-portrait.jpg" alt="Ferdinand Marcos">
                          </div>
                          <div class="president-info">
                              <h3>Ferdinand Marcos</h3>
@@ -178,7 +208,7 @@
                      <!-- President Card 11 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/corazon-portrait.jpg" alt="Corazon Aquino">
+                             <img src="./images/presidents/corazon-portrait.jpg" alt="Corazon Aquino">
                          </div>
                          <div class="president-info">
                              <h3>Corazon Aquino</h3>
@@ -191,7 +221,7 @@
                      <!-- President Card 12 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/ramos-portrait.jpg" alt="Fidel V. Ramos">
+                             <img src="./images/presidents/ramos-portrait.jpg" alt="Fidel V. Ramos">
                          </div>
                          <div class="president-info">
                              <h3>Fidel V. Ramos</h3>
@@ -204,7 +234,7 @@
                      <!-- President Card 13 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/estrada-portrait.jpg" alt="Joseph Estrada">
+                             <img src="./images/presidents/estrada-portrait.jpg" alt="Joseph Estrada">
                          </div>
                          <div class="president-info">
                              <h3>Joseph Estrada</h3>
@@ -217,7 +247,7 @@
                      <!-- President Card 14 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/arroyo-portrait.jpg" alt="Gloria Macapagal Arroyo">
+                             <img src="./images/presidents/arroyo-portrait.jpg" class="arroyo" alt="Gloria Macapagal Arroyo">
                          </div>
                          <div class="president-info">
                              <h3>Gloria Macapagal Arroyo</h3>
@@ -230,7 +260,7 @@
                      <!-- President Card 15 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/aquino-iii-portrait.jpg" alt="Benigno Aquino III">
+                             <img src="./images/presidents/aquino-iii-portrait.jpg" alt="Benigno Aquino III">
                          </div>
                          <div class="president-info">
                              <h3>Benigno Aquino III</h3>
@@ -243,7 +273,7 @@
                      <!-- President Card 16 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/duterte-portrait.jpg" alt="Rodrigo Duterte">
+                             <img src="./images/presidents/duterte-portrait.jpg" alt="Rodrigo Duterte">
                          </div>
                          <div class="president-info">
                              <h3>Rodrigo Duterte</h3>
@@ -256,7 +286,7 @@
                      <!-- President Card 17 -->
                      <div class="president-card">
                          <div class="president-image">
-                             <img src="./images/bong-marcos-portrait.jpg" alt="Ferdinand Marcos Jr.">
+                             <img src="./images/presidents/bong-marcos-portrait.jpg" alt="Ferdinand Marcos Jr.">
                          </div>
                          <div class="president-info">
                              <h3>Ferdinand Marcos Jr.</h3>
@@ -275,7 +305,7 @@
                      <div class="footer-column">
                          <h3>Philippine Presidents</h3>
                          <p>An educational resource documenting the leadership and governance of all Philippine presidents throughout history.</p>
-                         <p>Created by Angeles, Batiao, & Velitario.</p>
+                         <p>Created by <a href="https://www.facebook.com/charles.angeles.497301">Angeles</a>, <a href="https://www.facebook.com/calvin.juson#">Batiao</a>, & <a href="https://www.facebook.com/jasper.velitario.7#">Velitario.</a></p>
                      </div>
                      <div class="footer-column">
                          <h3>Quick Links</h3>
